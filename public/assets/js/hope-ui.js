@@ -77,7 +77,7 @@ if(typeof bootstrap !== typeof undefined) {
   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl)
   })
-  
+
   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-sidebar-toggle="tooltip"]'))
   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl)
@@ -118,7 +118,7 @@ const progressBarInit = (elem) => {
   if (typeof Waypoint !== typeof undefined) {
     new Waypoint( {
       element: elem,
-      handler: function() { 
+      handler: function() {
         setTimeout(() => {
           elem.style.width = currentValue + '%'
         }, 100);
@@ -262,6 +262,9 @@ if($.fn.DataTable){
   if($('[data-toggle="data-table"]').length) {
     const table = $('[data-toggle="data-table"]').DataTable({
       "dom": '<"row align-items-center"<"col-md-6" l><"col-md-6" f>><"table-responsive border-bottom my-3" rt><"row align-items-center" <"col-md-6" i><"col-md-6" p>><"clear">',
+      "language": {
+            "url": "https://cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json",
+      }
     });
   }
 }
@@ -393,7 +396,7 @@ $('#back-to-top').fadeOut();
   $(window).on("scroll", function() {
     if ($(this).scrollTop() > 250) {
       $('#back-to-top').fadeIn(1400);
-    } 
+    }
     else {
       $('#back-to-top').fadeOut(400);
     }
@@ -459,7 +462,7 @@ function darken_screen(yesno){
     }
   }
 }
-	
+
 function close_offcanvas(){
   darken_screen(false);
   if (document.querySelector('.mobile-offcanvas.show') !== null) {
@@ -486,7 +489,7 @@ document.addEventListener("DOMContentLoaded", function(){
   });
   if(document.querySelectorAll('.btn-close')) {
     document.querySelectorAll('.btn-close').forEach(function(everybutton){
-      everybutton.addEventListener('click', function (e) { 
+      everybutton.addEventListener('click', function (e) {
             close_offcanvas();
         });
     });
