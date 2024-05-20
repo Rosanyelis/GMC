@@ -64,7 +64,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/products/{id}/update-product', [ProductController::class, 'update'])->name('product.update');
     Route::delete('/products/{id}/delete-product', [ProductController::class, 'destroy'])->name('product.destroy');
 
-    /** ROUTE ORDERS */
+    /** ROUTE ORDERS and ORDER DETAILS*/
     // Route::get('/orders', [OrderController::class, 'index'])->name('order.index');
     // Route::get('/orders/create', [OrderController::class, 'create'])->name('order.create');
     // Route::post('/orders/store-order', [OrderController::class, 'store'])->name('order.store');
